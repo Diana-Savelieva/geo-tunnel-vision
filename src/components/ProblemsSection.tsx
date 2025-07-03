@@ -59,10 +59,8 @@ const ProblemsSection = () => {
         {/* Problems Section */}
         <div className="max-w-6xl mx-auto mb-20">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="gradient-text">Проблемы в шахтах,</span>
-              <br />
-              <span className="text-slate-700">которые мы решаем</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-700">
+              Проблемы в шахтах, которые мы решаем
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Наша система устраняет ключевые проблемы безопасности и эффективности 
@@ -70,20 +68,28 @@ const ProblemsSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {problems.map((problem, index) => (
-              <div key={index} className={`glass-effect rounded-xl p-6 hover:scale-105 transition-all duration-300 ${
-                index === 2 ? 'md:col-span-2 lg:col-span-1' : ''
-              } ${index === 3 ? 'lg:col-span-2' : ''}`}>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-slate-700 font-semibold text-lg mb-2">{problem.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{problem.description}</p>
-                  </div>
-                </div>
+          {/* Top row - 3 problems */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {problems.slice(0, 3).map((problem, index) => (
+              <div key={index} className="glass-effect rounded-xl p-6 hover:scale-105 transition-all duration-300 text-center">
+                <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-4" />
+                <h3 className="text-slate-700 font-semibold text-lg mb-2">{problem.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{problem.description}</p>
               </div>
             ))}
+          </div>
+
+          {/* Bottom row - 2 problems centered */}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
+              {problems.slice(3).map((problem, index) => (
+                <div key={index + 3} className="glass-effect rounded-xl p-6 hover:scale-105 transition-all duration-300 text-center">
+                  <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-4" />
+                  <h3 className="text-slate-700 font-semibold text-lg mb-2">{problem.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{problem.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -98,14 +104,14 @@ const ProblemsSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-6">
             {targetAudience.map((audience, index) => (
-              <div key={index} className="glass-effect rounded-xl p-8 text-center hover:scale-105 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600/20 transition-colors">
+              <div key={index} className="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 group min-w-[200px]">
+                <div className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600/20 transition-colors">
                   <audience.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h4 className="text-slate-700 font-bold text-xl mb-3">{audience.title}</h4>
-                <p className="text-slate-600 leading-relaxed">{audience.description}</p>
+                <h4 className="text-slate-700 font-bold text-lg mb-2">{audience.title}</h4>
+                <p className="text-slate-600 text-sm leading-relaxed">{audience.description}</p>
               </div>
             ))}
           </div>
