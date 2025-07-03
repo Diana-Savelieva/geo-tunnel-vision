@@ -28,13 +28,13 @@ const HeroSection = () => {
               </div>
 
               <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-                <span className="gradient-text">Навигационно-связная система</span>
+                <span className="gradient-text">Платформа мониторинга персонала</span>
                 <br />
-                <span className="text-slate-700">для подземных объектов</span>
+                <span className="text-slate-700">на подземных объектах</span>
               </h1>
 
               <p className="text-lg text-slate-600 leading-relaxed">
-                ПО для отслеживания и анализа перемещения персонала и техники в сложных условиях: 
+                Решение для отслеживания и анализа перемещения персонала и техники в сложных условиях: 
                 подземные сооружения, шахты, метрополитены, строительные площадки и объекты гражданской обороны. 
                 Точное позиционирование без GPS сигнала.
               </p>
@@ -54,8 +54,8 @@ const HeroSection = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/e2d96428-47ad-42c0-a471-ff6f18dca233.png" 
-                  alt="Система мониторинга персонала - интерфейс на компьютере и мобильном устройстве" 
+                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                  alt="Рабочий в шахте с каской - система мониторинга персонала" 
                   className="rounded-xl shadow-2xl max-w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-xl"></div>
@@ -65,40 +65,26 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* Contact Info and Stats Section */}
+      {/* Stats Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-6">
-          {/* Contact Info */}
-          <div className="text-center mb-12">
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-8">
-              <div className="text-center">
-                <div className="text-sm text-slate-500 mb-1">Телефон</div>
-                <div className="text-blue-600 font-medium text-lg">+7 903 550 66 06</div>
-              </div>
-              <div className="text-center">
-                <div className="text-sm text-slate-500 mb-1">Email</div>
-                <div className="text-blue-600 font-medium text-lg">e.skiba@pgteh.ru</div>
-              </div>
-            </div>
-          </div>
-
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="glass-effect rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">40%</div>
-              <div className="text-sm text-slate-600">Снижение времени поиска при ЧС</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="glass-effect rounded-lg p-8 text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-3">40%</div>
+              <div className="text-base text-slate-600">Снижение времени поиска при ЧС</div>
             </div>
-            <div className="glass-effect rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">35%</div>
-              <div className="text-sm text-slate-600">Сокращение ошибок учета времени</div>
+            <div className="glass-effect rounded-lg p-8 text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-3">35%</div>
+              <div className="text-base text-slate-600">Сокращение ошибок учета времени</div>
             </div>
-            <div className="glass-effect rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">30%</div>
-              <div className="text-sm text-slate-600">Снижение рисков НС</div>
+            <div className="glass-effect rounded-lg p-8 text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-3">30%</div>
+              <div className="text-base text-slate-600">Снижение рисков НС</div>
             </div>
-            <div className="glass-effect rounded-lg p-6 text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">60%</div>
-              <div className="text-sm text-slate-600">Дешевле импортных аналогов</div>
+            <div className="glass-effect rounded-lg p-8 text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-3">60%</div>
+              <div className="text-base text-slate-600">Дешевле импортных аналогов</div>
             </div>
           </div>
         </div>

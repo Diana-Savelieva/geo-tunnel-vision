@@ -1,5 +1,5 @@
 
-import { CheckCircle, Building, Factory, Construction, Hospital, Plane } from "lucide-react";
+import { CheckCircle, Mountain, Train, Construction, Package, Shield } from "lucide-react";
 
 const ProblemsSection = () => {
   const problems = [
@@ -27,29 +27,29 @@ const ProblemsSection = () => {
 
   const targetAudience = [
     {
-      icon: Building,
+      icon: Mountain,
       title: "Горнодобывающие компании",
-      description: "Шахты и рудники"
+      subtitle: "Шахты и рудники"
     },
     {
-      icon: Factory,
+      icon: Train,
       title: "Метрополитены",
-      description: "Подземные станции и туннели"
+      subtitle: "Подземные станции и туннели"
     },
     {
       icon: Construction,
       title: "Строительные площадки",
-      description: "Туннели и подземные объекты"
+      subtitle: "Туннели и подземные объекты"
     },
     {
-      icon: Hospital,
+      icon: Package,
       title: "Подземные хранилища",
-      description: "Склады и логистические центры"
+      subtitle: "Склады и логистические центры"
     },
     {
-      icon: Plane,
+      icon: Shield,
       title: "Объекты гражданской обороны",
-      description: "Бомбоубежища и укрытия"
+      subtitle: "Бомбоубежища и укрытия"
     }
   ];
 
@@ -94,7 +94,7 @@ const ProblemsSection = () => {
         </div>
 
         {/* Target Audience Section */}
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-slate-700 mb-4">
               Кому подходит наша система?
@@ -104,14 +104,14 @@ const ProblemsSection = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 justify-center">
             {targetAudience.map((audience, index) => (
-              <div key={index} className="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 group min-w-[200px]">
+              <div key={index} className="glass-effect rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600/20 transition-colors">
                   <audience.icon className="w-8 h-8 text-blue-600" />
                 </div>
                 <h4 className="text-slate-700 font-bold text-lg mb-2">{audience.title}</h4>
-                <p className="text-slate-600 text-sm leading-relaxed">{audience.description}</p>
+                <p className="text-slate-600 text-sm leading-relaxed">{audience.subtitle}</p>
               </div>
             ))}
           </div>

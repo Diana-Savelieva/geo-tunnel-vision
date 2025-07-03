@@ -101,41 +101,6 @@ const AdvantagesSection = () => {
             </Card>
           ))}
         </div>
-
-        <div className="mt-20 text-center">
-          <div className="glass-effect rounded-2xl p-12 max-w-5xl mx-auto bg-gradient-to-br from-blue-50/80 to-white/90 border border-blue-100">
-            <h3 className="text-3xl font-bold text-slate-700 mb-6">Области применения</h3>
-            <p className="text-xl text-slate-600 leading-relaxed mb-8">
-              Система предназначена для организации и ведения работ в различных подземных объектах
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-                <div className="text-blue-700 font-semibold text-sm">Шахты и рудники</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-                <div className="text-blue-700 font-semibold text-sm">Метрополитен</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-                <div className="text-blue-700 font-semibold text-sm">Строительство туннелей</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-                <div className="text-blue-700 font-semibold text-sm">Горноспасательные работы</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-                <div className="text-blue-700 font-semibold text-sm">Городские коммуникации</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-                <div className="text-blue-700 font-semibold text-sm">Бомбоубежища</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-                <div className="text-blue-700 font-semibold text-sm">Подземные хранилища</div>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 p-4 rounded-xl border border-blue-200 hover:shadow-lg transition-all duration-300">
-                <div className="text-blue-700 font-semibold text-sm">Укрытия ГО</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
