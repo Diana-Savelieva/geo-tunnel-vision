@@ -74,49 +74,49 @@ const AdvantagesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-slate-900">
+    <section className="py-24 bg-gradient-to-br from-slate-50 to-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="gradient-text">Наши преимущества</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Технологические решения, которые делают нашу систему лидером в области 
             подземного мониторинга персонала
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {advantages.map((advantage, index) => (
-            <Card key={index} className="glass-effect border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 group">
+            <Card key={index} className="glass-effect border-slate-200 hover:border-blue-300 transition-all duration-300 hover:scale-105 group bg-white/80">
               <CardHeader>
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-500 group-hover:to-blue-600 transition-all duration-300">
-                  <advantage.icon className="w-7 h-7 text-white" />
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-100 group-hover:to-blue-200 transition-all duration-300">
+                  <advantage.icon className="w-7 h-7 text-blue-600" />
                 </div>
-                <CardTitle className="text-white text-xl">{advantage.title}</CardTitle>
+                <CardTitle className="text-slate-700 text-xl">{advantage.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-300 leading-relaxed">{advantage.description}</p>
+                <p className="text-slate-600 leading-relaxed">{advantage.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="mt-20 text-center">
-          <div className="glass-effect rounded-2xl p-12 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-white mb-6">Области применения</h3>
-            <p className="text-xl text-slate-300 leading-relaxed mb-8">
+          <div className="glass-effect rounded-2xl p-12 max-w-4xl mx-auto bg-gradient-to-br from-blue-50/50 to-white/80">
+            <h3 className="text-3xl font-bold text-slate-700 mb-6">Области применения</h3>
+            <p className="text-xl text-slate-600 leading-relaxed mb-8">
               Система предназначена для организации и ведения работ в различных подземных объектах
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-blue-400 font-semibold">
-              <div>Шахты и рудники</div>
-              <div>Метрополитен</div>
-              <div>Строительство туннелей</div>
-              <div>Горноспасательные работы</div>
-              <div>Городские коммуникации</div>
-              <div>Бомбоубежища</div>
-              <div>Подземные хранилища</div>
-              <div>Укрытия ГО</div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-blue-600 font-semibold">
+              <div className="p-3 bg-blue-50 rounded-lg">Шахты и рудники</div>
+              <div className="p-3 bg-blue-50 rounded-lg">Метрополитен</div>
+              <div className="p-3 bg-blue-50 rounded-lg">Строительство туннелей</div>
+              <div className="p-3 bg-blue-50 rounded-lg">Горноспасательные работы</div>
+              <div className="p-3 bg-blue-50 rounded-lg">Городские коммуникации</div>
+              <div className="p-3 bg-blue-50 rounded-lg">Бомбоубежища</div>
+              <div className="p-3 bg-blue-50 rounded-lg">Подземные хранилища</div>
+              <div className="p-3 bg-blue-50 rounded-lg">Укрытия ГО</div>
             </div>
           </div>
         </div>

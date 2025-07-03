@@ -11,67 +11,79 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative py-16 md:py-24 flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-50" />
-      
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400/3 rounded-full blur-3xl" />
-      </div>
+    <section className="relative py-12 md:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left side - Text content */}
+          <div className="space-y-8">
+            <div className="flex items-center space-x-2 mb-6">
+              <div className="glass-effect-dark rounded-full p-2">
+                <div className="flex space-x-1">
+                  <Shield className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <AlertTriangle className="w-5 h-5 text-blue-600" />
+                </div>
+              </div>
+            </div>
 
-      <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="flex justify-center mb-8">
-          <div className="glass-effect-dark rounded-full p-4">
-            <div className="flex space-x-2">
-              <Shield className="w-8 h-8 text-blue-600" />
-              <MapPin className="w-8 h-8 text-blue-600" />
-              <AlertTriangle className="w-8 h-8 text-blue-600" />
+            <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+              <span className="gradient-text">Навигационно-связная система</span>
+              <br />
+              <span className="text-slate-700">для подземных объектов</span>
+            </h1>
+
+            <p className="text-lg text-slate-600 leading-relaxed">
+              ПО для отслеживания и анализа перемещения персонала и техники в сложных условиях: 
+              подземные сооружения, шахты, метрополитены, строительные площадки и объекты гражданской обороны. 
+              Точное позиционирование без GPS сигнала.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                size="lg" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
+                onClick={scrollToContact}
+              >
+                Оставить заявку
+              </Button>
+              
+              <div className="text-sm text-slate-500 space-y-1">
+                <div>Телефон: <span className="text-blue-600 font-medium">+7 903 550 66 06</span></div>
+                <div>Email: <span className="text-blue-600 font-medium">e.skiba@pgteh.ru</span></div>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="glass-effect-dark rounded-lg p-4">
+                <div className="text-2xl font-bold text-blue-600 mb-1">40%</div>
+                <div className="text-xs text-slate-600">Снижение времени поиска при ЧС</div>
+              </div>
+              <div className="glass-effect-dark rounded-lg p-4">
+                <div className="text-2xl font-bold text-blue-600 mb-1">35%</div>
+                <div className="text-xs text-slate-600">Сокращение ошибок учета времени</div>
+              </div>
+              <div className="glass-effect-dark rounded-lg p-4">
+                <div className="text-2xl font-bold text-blue-600 mb-1">30%</div>
+                <div className="text-xs text-slate-600">Снижение рисков НС</div>
+              </div>
+              <div className="glass-effect-dark rounded-lg p-4">
+                <div className="text-2xl font-bold text-blue-600 mb-1">60%</div>
+                <div className="text-xs text-slate-600">Дешевле импортных аналогов</div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          <span className="gradient-text">Навигационно-связная система</span>
-          <br />
-          <span className="text-slate-700">для подземных объектов</span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-          ПО для отслеживания и анализа перемещения персонала и техники в сложных условиях: 
-          подземные сооружения, шахты, метрополитены, строительные площадки и объекты гражданской обороны. 
-          Точное позиционирование без GPS сигнала.
-        </p>
-
-        <div className="flex justify-center mb-12">
-          <Button 
-            size="lg" 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
-            onClick={scrollToContact}
-          >
-            Оставить заявку
-          </Button>
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-          <div className="glass-effect-dark rounded-lg p-6">
-            <div className="text-3xl font-bold text-blue-600 mb-2">40%</div>
-            <div className="text-sm text-slate-600">Снижение времени поиска при ЧС</div>
-          </div>
-          <div className="glass-effect-dark rounded-lg p-6">
-            <div className="text-3xl font-bold text-blue-600 mb-2">35%</div>
-            <div className="text-sm text-slate-600">Сокращение ошибок учета времени</div>
-          </div>
-          <div className="glass-effect-dark rounded-lg p-6">
-            <div className="text-3xl font-bold text-blue-600 mb-2">30%</div>
-            <div className="text-sm text-slate-600">Снижение рисков НС</div>
-          </div>
-          <div className="glass-effect-dark rounded-lg p-6">
-            <div className="text-3xl font-bold text-blue-600 mb-2">60%</div>
-            <div className="text-sm text-slate-600">Дешевле импортных аналогов</div>
+          {/* Right side - Generated image placeholder */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <img 
+                src="/lovable-uploads/e2d96428-47ad-42c0-a471-ff6f18dca233.png" 
+                alt="Система мониторинга персонала - интерфейс на компьютере и мобильном устройстве" 
+                className="rounded-xl shadow-2xl max-w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-xl"></div>
+            </div>
           </div>
         </div>
       </div>
