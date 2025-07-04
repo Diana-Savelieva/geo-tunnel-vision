@@ -1,5 +1,6 @@
 
 
+
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -54,11 +55,10 @@ const HeroSection = () => {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/10c1b8d3-8049-4da3-93fa-8ee295f6bf44.png" 
+                  src="/lovable-uploads/799b2be6-cc75-46f5-afee-4329ac06d812.png" 
                   alt="Интерфейс системы мониторинга ПРОГЕОТЕХ" 
-                  className="rounded-xl shadow-2xl max-w-full h-auto w-full object-contain"
+                  className="max-w-[80%] h-auto w-auto object-contain drop-shadow-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/5 to-transparent rounded-xl"></div>
               </div>
             </div>
           </div>
@@ -94,4 +94,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
