@@ -1,6 +1,5 @@
 
 import { Button } from "@/components/ui/button";
-import { Shield, MapPin, AlertTriangle } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -18,12 +17,12 @@ const HeroSection = () => {
             {/* Left side - Text content */}
             <div className="space-y-8">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="glass-effect-dark rounded-full p-2">
-                  <div className="flex space-x-1">
-                    <Shield className="w-5 h-5 text-blue-600" />
-                    <MapPin className="w-5 h-5 text-blue-600" />
-                    <AlertTriangle className="w-5 h-5 text-blue-600" />
-                  </div>
+                <div className="flex items-center">
+                  <img 
+                    src="/lovable-uploads/bf64424f-49fc-432e-aa22-5002965f254f.png" 
+                    alt="ПРОГЕОТЕХ логотип" 
+                    className="h-12 w-auto"
+                  />
                 </div>
               </div>
 
@@ -50,15 +49,17 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Right side - Generated image placeholder */}
+            {/* Right side - System interface screenshot */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                  alt="Рабочий в шахте с каской - система мониторинга персонала" 
-                  className="rounded-xl shadow-2xl max-w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-xl"></div>
+                <div className="bg-white rounded-xl shadow-2xl p-4 max-w-full">
+                  <img 
+                    src="/lovable-uploads/d1d2cffc-821d-4843-9150-d563778a588f.png" 
+                    alt="Интерфейс системы мониторинга ПРОГЕОТЕХ" 
+                    className="rounded-lg max-w-full h-auto w-full object-contain"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/5 to-transparent rounded-xl"></div>
               </div>
             </div>
           </div>
