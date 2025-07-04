@@ -1,5 +1,4 @@
 
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Wrench, 
@@ -12,11 +11,17 @@ import {
   TrendingUp,
   Users2,
   Settings,
-  BarChart
+  BarChart,
+  Shield
 } from "lucide-react";
 
 const AdvantagesSection = () => {
   const advantages = [
+    {
+      icon: Shield,
+      title: "Выполнение требований МФСБ",
+      description: "Соответствие всем требуемым нормам МФСБ"
+    },
     {
       icon: Wrench,
       title: "Решение под ключ",
@@ -29,7 +34,7 @@ const AdvantagesSection = () => {
     },
     {
       icon: Target,
-      title: "Точность до 10 метров",
+      title: "Точность до 1 метра",
       description: "Высокоточное определение координат персонала, оборудования и транспорта"
     },
     {
@@ -108,4 +113,3 @@ const AdvantagesSection = () => {
 };
 
 export default AdvantagesSection;
-

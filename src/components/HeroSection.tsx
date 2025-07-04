@@ -1,4 +1,6 @@
+
 import { Button } from "@/components/ui/button";
+import { Mail, Phone } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -12,19 +14,31 @@ const HeroSection = () => {
     <>
       <section className="relative py-12 md:py-16 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto px-6">
+          {/* Header with logo and contacts */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/bf64424f-49fc-432e-aa22-5002965f254f.png" 
+                alt="ПРОГЕОТЕХ логотип" 
+                className="h-8 w-auto"
+              />
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mt-4 md:mt-0">
+              <div className="flex items-center gap-2 text-slate-600">
+                <Mail className="w-4 h-4" />
+                <span className="text-sm">e.skiba@pgteh.ru</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-600">
+                <Phone className="w-4 h-4" />
+                <span className="text-sm">+7 903 550 66 06</span>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Text content */}
             <div className="space-y-8">
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="flex items-center">
-                  <img 
-                    src="/lovable-uploads/bf64424f-49fc-432e-aa22-5002965f254f.png" 
-                    alt="ПРОГЕОТЕХ логотип" 
-                    className="h-6 w-auto"
-                  />
-                </div>
-              </div>
-
               <h1 className="text-3xl md:text-5xl font-bold leading-tight">
                 <span className="gradient-text">Платформа мониторинга персонала</span>
                 <br />
@@ -80,7 +94,7 @@ const HeroSection = () => {
               <div className="text-base text-slate-600">Снижение рисков НС</div>
             </div>
             <div className="glass-effect rounded-lg p-8 text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-3">60%</div>
+              <div className="text-4xl font-bold text-blue-600 mb-3">30%</div>
               <div className="text-base text-slate-600">Дешевле импортных аналогов</div>
             </div>
           </div>
