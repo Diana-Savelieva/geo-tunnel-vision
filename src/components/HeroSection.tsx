@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -21,7 +22,7 @@ const HeroSection = () => {
                   <img 
                     src="/lovable-uploads/bf64424f-49fc-432e-aa22-5002965f254f.png" 
                     alt="ПРОГЕОТЕХ логотип" 
-                    className="h-12 w-auto"
+                    className="h-8 w-auto"
                   />
                 </div>
               </div>
@@ -52,13 +53,11 @@ const HeroSection = () => {
             {/* Right side - System interface screenshot */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
-                <div className="bg-white rounded-xl shadow-2xl p-4 max-w-full">
-                  <img 
-                    src="/lovable-uploads/d1d2cffc-821d-4843-9150-d563778a588f.png" 
-                    alt="Интерфейс системы мониторинга ПРОГЕОТЕХ" 
-                    className="rounded-lg max-w-full h-auto w-full object-contain"
-                  />
-                </div>
+                <img 
+                  src="/lovable-uploads/10c1b8d3-8049-4da3-93fa-8ee295f6bf44.png" 
+                  alt="Интерфейс системы мониторинга ПРОГЕОТЕХ" 
+                  className="rounded-xl shadow-2xl max-w-full h-auto w-full object-contain"
+                />
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/5 to-transparent rounded-xl"></div>
               </div>
             </div>
@@ -95,3 +94,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
