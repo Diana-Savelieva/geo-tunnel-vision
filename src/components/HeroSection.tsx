@@ -1,6 +1,3 @@
-
-
-
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -23,7 +20,7 @@ const HeroSection = () => {
                   <img 
                     src="/lovable-uploads/bf64424f-49fc-432e-aa22-5002965f254f.png" 
                     alt="ПРОГЕОТЕХ логотип" 
-                    className="h-8 w-auto"
+                    className="h-6 w-auto"
                   />
                 </div>
               </div>
@@ -57,7 +54,7 @@ const HeroSection = () => {
                 <img 
                   src="/lovable-uploads/799b2be6-cc75-46f5-afee-4329ac06d812.png" 
                   alt="Интерфейс системы мониторинга ПРОГЕОТЕХ" 
-                  className="max-w-[80%] h-auto w-auto object-contain drop-shadow-2xl"
+                  className="max-w-full h-auto w-full object-contain drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -94,5 +91,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-

@@ -1,4 +1,5 @@
 
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Wrench, 
@@ -74,29 +75,29 @@ const AdvantagesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="gradient-text">Наши преимущества</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Технологические решения, которые делают нашу систему лидером в области 
             подземного мониторинга персонала
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-7xl mx-auto">
           {advantages.map((advantage, index) => (
             <Card key={index} className="glass-effect border-slate-200 hover:border-blue-300 transition-all duration-300 hover:scale-105 group bg-white/80">
-              <CardHeader className="pb-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center mb-3 group-hover:from-blue-100 group-hover:to-blue-200 transition-all duration-300">
-                  <advantage.icon className="w-6 h-6 text-blue-600" />
+              <CardHeader className="pb-2">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center mb-2 group-hover:from-blue-100 group-hover:to-blue-200 transition-all duration-300">
+                  <advantage.icon className="w-5 h-5 text-blue-600" />
                 </div>
-                <CardTitle className="text-slate-700 text-lg leading-tight">{advantage.title}</CardTitle>
+                <CardTitle className="text-slate-700 text-base leading-tight">{advantage.title}</CardTitle>
               </CardHeader>
               <CardContent className="pt-0">
-                <p className="text-slate-600 text-sm leading-relaxed">{advantage.description}</p>
+                <p className="text-slate-600 text-xs leading-relaxed">{advantage.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -107,3 +108,4 @@ const AdvantagesSection = () => {
 };
 
 export default AdvantagesSection;
+
