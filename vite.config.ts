@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/",  // <-- здесь базовый путь
+  base: "/",  // если сайт на корне собственного домена
   server: {
     host: "::",
     port: 8080,
@@ -19,4 +19,3 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
-
