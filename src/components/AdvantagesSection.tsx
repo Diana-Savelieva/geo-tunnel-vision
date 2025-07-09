@@ -83,10 +83,10 @@ const AdvantagesSection = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">Наши преимущества</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-700">
+            Наши преимущества
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Технологические решения, которые делают нашу систему лидером в области 
             подземного мониторинга персонала
           </p>

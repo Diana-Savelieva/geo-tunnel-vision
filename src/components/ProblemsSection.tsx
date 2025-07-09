@@ -96,10 +96,10 @@ const ProblemsSection = () => {
         {/* Target Audience Section */}
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-700 mb-4">
+            <h3 className="text-4xl md:text-5xl font-bold mb-6 text-slate-700">
               Кому подходит наша система?
             </h3>
-            <p className="text-lg text-slate-600 leading-relaxed">
+            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               Решение для различных отраслей и типов подземных объектов
             </p>
           </div>
