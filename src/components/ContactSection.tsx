@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, Building } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -14,11 +15,51 @@ const ContactSection = () => {
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://berurlhqaulturltwrkt.supabase.co/functions/v1/send-contact-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Мы свяжемся с вами в ближайшее время.",
+        });
+        
+        // Очистить форму
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: ''
+        });
+      } else {
+        throw new Error(result.error || 'Ошибка при отправке');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Ошибка отправки",
+        description: "Попробуйте еще раз или свяжитесь с нами по телефону.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -58,6 +99,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       className="w-full"
                       placeholder="Ваше имя"
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
@@ -73,6 +115,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       className="w-full"
                       placeholder="your@email.com"
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
@@ -90,6 +133,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       className="w-full"
                       placeholder="+7 (999) 999-99-99"
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
@@ -104,6 +148,7 @@ const ContactSection = () => {
                       onChange={handleChange}
                       className="w-full"
                       placeholder="Название компании"
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
@@ -120,14 +165,16 @@ const ContactSection = () => {
                     onChange={handleChange}
                     className="w-full"
                     placeholder="Расскажите о вашем объекте и задачах..."
+                    disabled={isSubmitting}
                   />
                 </div>
 
                 <Button 
                   type="submit" 
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
+                  disabled={isSubmitting}
                 >
-                  Отправить заявку
+                  {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                 </Button>
               </form>
             </CardContent>
