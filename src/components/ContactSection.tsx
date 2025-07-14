@@ -20,9 +20,14 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Form submission started');
+    console.log('Form data:', formData);
+    
     setIsSubmitting(true);
 
     try {
+      console.log('Sending request to Edge Function...');
+      
       const response = await fetch('https://berurlhqaulturltwrkt.supabase.co/functions/v1/send-contact-form', {
         method: 'POST',
         headers: {
@@ -31,9 +36,13 @@ const ContactSection = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log('Response received:', response.status, response.statusText);
+      
       const result = await response.json();
+      console.log('Response data:', result);
 
       if (response.ok) {
+        console.log('Form submitted successfully');
         toast({
           title: "Заявка отправлена!",
           description: "Мы свяжемся с вами в ближайшее время.",
@@ -48,6 +57,7 @@ const ContactSection = () => {
           message: ''
         });
       } else {
+        console.error('Server error:', result.error);
         throw new Error(result.error || 'Ошибка при отправке');
       }
     } catch (error) {
@@ -58,6 +68,7 @@ const ContactSection = () => {
         variant: "destructive",
       });
     } finally {
+      console.log('Form submission finished');
       setIsSubmitting(false);
     }
   };
